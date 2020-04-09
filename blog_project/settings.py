@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # local apps
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig', # new
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # new
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home' # new
